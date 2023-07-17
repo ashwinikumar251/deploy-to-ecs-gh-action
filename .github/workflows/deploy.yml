@@ -48,7 +48,7 @@ jobs:
       - name: Download task definition
         run: |
           echo $ECS_TASK_DEFINITION
-          aws ecs describe-task-definition --task-definition $ECS_TASK_DEFINITION --output json 
+          aws ecs describe-task-definition --task-definition $ECS_TASK_DEFINITION --output json --query taskDefinition
           # aws ecs describe-task-definition --task-definition $ECS_TASK_DEFINITION --output json --query taskDefinition > task-definition.json
           # cat task-definition.json
 
